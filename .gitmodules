@@ -1,0 +1,3 @@
+[submodule "kradtraining"]
+	path = kradtraining
+	url = https://code.google.com/p/kradtraining/
