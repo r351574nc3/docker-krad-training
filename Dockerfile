@@ -12,3 +12,21 @@ RUN yum install -y /tmp/jdk-8u5-linux-i586.rpm
 
 RUN rm -f /tmp/jdk*
 
+wget --no-verbose -O /tmp/apache-maven-3.2.2.tar.gz \
+    http://archive.apache.org/dist/maven/maven-3/3.2.2/binaries/apache-maven-3.2.2-bin.tar.gz
+ 
+
+# Verify Download
+RUN echo "87e5cc81bc4ab9b83986b3e77e6b3095  /tmp/apache-maven-3.2.2.tar.gz" | \
+    md5sum -c
+
+RUN tar -xzf /tmp/apache-maven-3.2.2.tar.gz 
+RUN mv apache-maven-3.2.2 /usr/local
+RUN ln -s /usr/local/apache-maven-3.2.2 /usr/local/apache-maven
+RUN ln -s /usr/local/apache-maven/bin/* /usr/local/bin
+
+ENV MAVEN_OPTS -Xmx1g -XX:MaxPermSize=256m 
+
+RUN yum -y install git
+RUN yum -y install subversion
+
