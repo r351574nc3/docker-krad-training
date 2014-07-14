@@ -13,7 +13,7 @@ RUN yum install -y /tmp/jdk-8u5-linux-i586.rpm
 
 RUN rm -f /tmp/jdk*
 
-wget --no-verbose -O /tmp/apache-maven-3.2.2.tar.gz \
+RUN wget --no-verbose -O /tmp/apache-maven-3.2.2.tar.gz \
     http://archive.apache.org/dist/maven/maven-3/3.2.2/binaries/apache-maven-3.2.2-bin.tar.gz
  
 
