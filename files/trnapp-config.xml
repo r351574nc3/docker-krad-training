@@ -1,0 +1,7 @@
+<config>
+    <param name="datasource.ojb.platform">MySQL</param>
+    <param name="datasource.url">jdbc:mysql://localhost/RICE</param>
+    <param name="datasource.username">RICE</param>
+    <param name="datasource.password">RICE</param>
+    <param name="rice.ksb.cxf.client.receiveTimeout">1000</param>
+</config>
