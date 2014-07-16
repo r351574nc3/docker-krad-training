@@ -1,4 +1,4 @@
-FROM r351574nc3/kuali-base:latest
+FROM r351574nc3/kuali-mysql-base:latest
 
 MAINTAINER Leo Przybylski https://github.com/r351574nc3/
 
